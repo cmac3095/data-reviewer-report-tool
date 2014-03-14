@@ -1,0 +1,36 @@
+  BatchJobName:               C:\PLTS\Data\RedlandsGeoOnGeo.rbj
+  CreatedBy:                  charlesm
+  CreationDate:               Friday, December 10, 2010
+  LastEditedBy:               charlesm
+  LastEditDate:               Friday, December 10, 2010
+  BatchJobVersion:            10.0
+
+ Group:  Redlands
+  Check:                      Geometry on Geometry Check
+  Title:                      Redlands Geo on Geo Check
+  Resources:  
+    Primary Resource:         Parcels_Boundaries
+     DATABASE:                C:\PLTS\Data\Redlands_92.mdb
+     Filter(s):
+      Where Clause:           AREA >= 1052 
+    Geo on Geo Parameter 2:   CityBoundary
+     DATABASE:                C:\PLTS\Data\Redlands_92.mdb
+     Filter(s):
+      Where Clause:           LENGTH > 100
+  Reviewer Check Notes:       These are notes
+  Reviewer Check Severity:    5
+  NotQuery:                   false
+  CheckAttributes:            false
+    ErrorConditions:
+     [AREA] (esriFieldTypeDouble null)
+ = [LENGTH] (esriFieldTypeDouble null)
+
+     [Length_Feet] (esriFieldTypeDouble null)
+ < [Shape_Length] (esriFieldTypeDouble null, required, readonly, alias: [Shape_Length], model: [Shape_Length])
+
+     [PARCEL_ID] (esriFieldTypeInteger null)
+ = [BOUND_ID] (esriFieldTypeInteger null)
+
+  SpatialEnum:                Intersects
+  Tolerance:                  100 Meters
+  Check Configuration Version:10
